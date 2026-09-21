@@ -1,0 +1,159 @@
+
+/*Kode til produktsidens struktur*/
+
+.contentnavigation {
+    margin: 0;
+    top: 0;
+    background-color: #181836;
+    font-size: 2rem;
+}
+
+.contentnavigation p{
+    color:#c3d4cf;
+    font-size: 1.025rem;
+}
+
+.contentnavigation h2{
+    color:#f4c034;
+    font-size: 2rem;
+    text-align: center;
+    
+}
+
+.contentnavigation h2:hover{
+    color: #A82222;
+    transition: color 0.2s;
+}
+
+.contentnavigation i{
+    color:#f4c034;
+    font-size: 1.025rem;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til produktsidens container*/
+
+.contentcontainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+    
+}
+
+.contentcontainer img{
+    max-width: 450px;
+    max-height: 1218px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til hver enkelt spillemaskine på produktsiden*/
+
+.content1, .content2, .content3 {
+    padding-bottom: 20px;
+    max-width: 450px;
+}
+
+
+.content1 img, .content2 img, .content3 img {
+    filter: grayscale(30%);
+}
+
+
+.content1 img:hover, .content2 img:hover, .content3 img:hover {
+    filter: grayscale(0%);
+    transition: filter 0.2s; 
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 1800px*/
+
+@media only screen and (max-width:1800px)
+{
+    .contentcontainer img {
+        max-width: 350px;
+        max-height: 900px;
+    }
+
+    .content1, .content2, .content3 {
+        max-width: 350px;
+        
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 1150px*/
+
+@media only screen and (max-width:1150px) {
+    .contentcontainer img {
+        max-width: 250px;
+        max-height: 600px;
+    }
+    .content1, .content2, .content3 {
+        max-width: 250px;
+        
+    }
+
+    .content1 h2, .content2 h2, .content3 h2 {
+        max-width: 250px;
+        font-size: 1.5rem;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 850px*/
+
+
+@media only screen and (max-width:850px) {
+    .contentcontainer img {
+        max-width: 150px;
+        max-height: 400px;
+    }
+    .content1, .content2, .content3 {
+        max-width: 150px;
+        
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 600px*/
+
+@media only screen and (max-width:600px) {
+    .contentcontainer {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .contentcontainer img {
+        max-width: 100%;
+        max-height: 100%;
+        padding-bottom: 20px;
+        
+        
+    }
+    .content1, .content2, .content3 {
+        max-width: 100%;
+        border-top: 1px solid #c3d4cf;
+        padding-top: 20px;
+        align-items: center;
+    }
+    .content1 h2, .content2 h2, .content3 h2 {
+        max-width: 100%;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+
+ 
+  
+  

@@ -1,0 +1,277 @@
+/*Kode til "om maskinen" og tekniske specifikationer deler af hver enkelte spillemaskinernes sider - resten af sidernes struktur kan findes på _spillemaskine.scss*/
+
+/*Kode til "om maskinen" og tekniske specifikationer struktur*/
+
+.tekniskenavigation {
+    margin: 0;
+    top: 0;
+    background-color: #18183b;
+    font-size: 1.2rem;
+    width: 100%;
+    border-bottom: 2px solid #f4c034;
+
+    
+}
+
+
+.tekniskenavigation p{
+    color:#f4c034;
+    font-size: 1.025rem;
+}
+
+.tekniskenavigation h2{
+    color: #f4c034;
+    font-size: 2rem;
+    
+}
+
+
+.tekniskenavigation i{
+    color:#f4c034;
+    font-size: 1.025rem;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+/*Kode til "om maskinen" og tekniske specifikationer container*/
+
+.tekniskecontainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 200px;
+    
+}
+
+.tekniskecontainer img{
+    width: 250px;
+}
+
+.tekniskecontainer li {
+    padding-bottom: 2px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til hver enkelte element af "om maskinen" og tekniske specifikationer del af siden*/
+
+.tekniske1, .tekniske2, .tekniske3 {
+    
+    padding-bottom: 20px;
+    color: white;
+   width: 30%;
+    
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til "om maskinen" og tekniske specifikationer elementer - tekniske1 svarer til "om maskinen" og tekniske3 svarer til specifikationerne*/
+
+ .tekniske1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tekniske1 h2{
+    margin-bottom: 0;
+}
+
+.tekniske1 ul{
+    padding-left: 15px;
+    
+}
+ 
+  .tekniske1, .tekniske3 {
+    padding-top: 30px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+/*Kode til spillemaskinens billede og titel*/
+
+.tekniske2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+.tekniske2 h1{
+
+    letter-spacing: 0.5rem;
+    color: #f4c034;
+    text-align: center;
+    margin-bottom: 0;
+    width: 250px;
+}
+
+
+
+.tekniske2 img{
+    justify-content: center;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 1800px*/
+
+@media only screen and (max-width:1800px)
+{
+
+    .tekniskecontainer{
+        padding: 50px 80px
+    }
+    .tekniskecontainer img {
+        width: 200px;
+    }
+
+    .tekniske1, .tekniske3 {
+        font-size: 1rem;
+        
+    }
+    .tekniske2 h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 1150px*/
+
+@media only screen and (max-width:1150px) {
+    .tekniskecontainer {
+        flex-direction: column;
+        align-items: center;
+        
+        
+    }
+    .tekniske1, .tekniske2, .tekniske3 {
+        width: 100%;
+        border-bottom: 1px solid #f4c034;
+    }
+
+    .tekniske1, .tekniske3 {
+        padding: 50px 2rem;
+    }
+    
+    .tekniskecontainer img {
+        width: 40%;
+    }
+
+    .tekniske2 {
+        order:1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+
+    .tekniske2 h1 {
+        text-align: center;
+        font-size: 3rem;
+        width: 100%;
+    }
+
+    .tekniske1 {
+        order:2;
+        font-size: 2rem;
+        padding-bottom: 0px;
+    }
+
+    .tekniske1 h2 {
+        text-align: center;
+        
+        padding-bottom: 20px;
+    }
+
+    .tekniske3 {
+        order: 3;
+        font-size: 2rem;
+        padding-bottom: 0px;
+        
+    }
+
+    .tekniske3 h2 {
+        text-align: center;
+        
+        padding-bottom: 20px;
+    }
+    
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 850px*/
+
+@media only screen and (max-width:850px) {
+    
+    
+    .tekniske2 h1 {
+        
+        font-size: 3rem;
+    }
+
+    .tekniskecontainer img {
+        width: 50%;
+    }
+
+
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 600px*/
+
+@media only screen and (max-width:600px) {
+    .tekniskecontainer {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .tekniske1 li, .tekniske3 li {
+        font-size: 1.5rem;
+    }
+
+    .tekniske2 h1 {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    .tekniskecontainer img {
+        width: 70%;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 450px*/
+
+@media only screen and (max-width: 450px) {
+    .tekniske1 li, .tekniske2 li, .tekniske3 li{
+        font-size: 1rem ;
+        text-align: center;
+    }
+
+    ul {
+        padding-left: 0;
+        list-style-position:inside;
+    }
+
+    .tekniske1 h3, .tekniske3 h3{
+        font-size: 1.5rem ;
+        text-align: center;
+    }
+
+    .tekniske1 h2, .tekniske3 h2{
+        font-size: 1.5rem ;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+

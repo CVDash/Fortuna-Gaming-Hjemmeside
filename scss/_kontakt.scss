@@ -1,0 +1,196 @@
+
+/*Kode til mest af sidernes struktur - Kontakt, Ansvarlighed, Ansvarligheds Link, Om Os, Whistleblower og Ledige Stillinger*/
+
+.kontaktnavigation {
+    margin: 0;
+    top: 0;
+    background-color: #181836;
+    font-size: 2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.kontaktnavigation p{
+    color:#f4c034;
+    font-size: 1.025rem;
+    
+}
+
+.kontaktnavigation h1 {
+    text-align: center;
+    color: #f4c034;
+    padding: 30px 0;
+}
+
+.kontaktnavigation h2{
+    color:#f4c034;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.kontaktnavigation h2:hover{
+    color: #A82222;
+    transition: color 0.2s;
+}
+
+.kontaktnavigation h1:hover{
+    color: #A82222;
+    transition: color 0.2s;
+}
+
+.kontaktnavigation i{
+    color:#c3d4cf;
+    font-size: 1.025rem;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til kontakt sides container*/
+
+.kontaktcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.kontaktcontainer img{
+    max-width: 800px;
+    max-height: 1218px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til hver enkelt kontakt element*/
+
+.kontakt1, .kontakt2, .kontakt3, .kontakt4{
+    padding-bottom: 50px;
+    width: 36rem;
+    text-align: center;
+    flex: 50%;
+}
+
+.kontakt1 img, .kontakt2 img, .kontakt3 img, .kontakt4 img{
+    filter: grayscale(50%);
+    
+}
+
+.kontakt1 img:hover, .kontakt2 img:hover, .kontakt3 img:hover, .kontakt4 img:hover {
+    filter: grayscale(0%);
+    transition: filter 0.2s; 
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+
+/*Kode til mest af den lysegrønnet tekst på kontaktsiden*/
+
+.email {
+    color: #c3d4cf;
+}
+
+.email:hover {
+    color: #A82222;
+    transition: color 0.2s;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+/*Kode til kontaktsiden når skærmstørrelsen er lige med eller mindre end 1810px*/
+
+@media only screen and (max-width:1810px) {
+
+    .kontaktcontainer img {
+        max-width: 600px;
+    }
+
+    .kontakt1, .kontakt2, .kontakt3, .kontakt4{
+        max-width: 600px;
+    }
+
+    .kontakt1 h2, .kontakt2 h2, .kontakt3 h2, .kontakt4 h2  {
+        font-size: 1.5rem;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+    
+/*Kode til kontaktsiden når skærmstørrelsen er lige med eller mindre end 1366px*/
+
+@media only screen and (max-width:1366px)
+{
+    .kontaktcontainer img {
+        max-width: 500px;
+    }
+
+    .kontakt1, .kontakt2, .kontakt3, .kontakt4{
+        max-width: 500px;
+    }
+
+    .kontakt1 h2, .kontakt2 h2, .kontakt3 h2, .kontakt4 h2  {
+        font-size: 1rem;
+    }
+
+
+    .kontaktnavigation h1 {
+        font-size: 3rem;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+
+
+/*Kode til kontaktsiden når skærmstørrelsen er lige med eller mindre end 800px*/
+
+
+@media only screen and (max-width:1279px) {
+    .kontaktcontainer {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .kontaktcontainer img {
+        max-width: 100%;
+        padding-bottom: 10px;
+        
+        
+    }
+    
+    .kontakt1{
+        max-width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .kontakt2, .kontakt3, .kontakt4{
+        max-width: 100%;
+        border-top: 1px solid #f4c034;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .kontakt1 h2, .kontakt2 h2, .kontakt3 h2, .kontakt4 h2  {
+        font-size: 2rem;
+        padding-top:10px;
+    }
+
+    .kontakt1 p, .kontakt2 p, .kontakt3 p, .kontakt4 p {
+        font-size: 1.025rem;
+    }
+
+    .kontaktnavigation h1 {
+        font-size: 2rem;
+    }
+
+
+    
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+

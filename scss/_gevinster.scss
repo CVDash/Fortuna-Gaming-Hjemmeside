@@ -1,0 +1,143 @@
+/*Kode til gevinster container*/
+.gevinstercontainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    font-size: 2rem;
+    padding: 2rem 2rem;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til hver element på gevinstersiden*/
+
+.gevinstercontent {
+    width: 100%;
+    max-width: 80rem;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gevinstercontent p {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+    }
+
+.gevinstercontent h3 {
+color: #f4c034;
+
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til at lave pris baggrund og farve konstant ændre sig*/
+
+
+@-webkit-keyframes Dannebrog {
+    0% { background-color: white; color: #E31836; }
+    50% { background-color: #E31836; color: white;}
+    100% {background-color: white; color: #E31836;}
+}
+
+
+.gevinstercontentright h3{
+    text-align: center;
+    border-radius: 5px;
+    width: 15rem;
+    -webkit-animation-name: Dannebrog;
+    -webkit-animation-iteration-count:infinite ;
+    -webkit-animation-duration: 2s;
+
+}
+/*------------------------------------------------------------------------------------------------*/
+
+
+/*Kode til gevinsters regnede dollars baggrund*/
+
+#gevinsterbaggrund {
+    width: 100vw;
+   height: 100vh;
+   object-fit: cover;
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   z-index: -1;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til "find din forhandler" knap*/
+
+
+.finddinforhandler {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom:25px;
+}
+
+.finddinforhandler p{
+background-color: #E31836;
+width: 300px;
+text-align: center;
+padding: 10px;
+color: white;
+border-radius: 5px;
+}
+
+.finddinforhandler p:hover {
+background-color: #A82222;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til gevinster siden dette virker kun når skærmstørrelsen er lige med eller mindre end 850px*/
+
+@media only screen and (max-width: 850px){
+    .gevinstercontent h3 {
+        font-size: 1.5rem;
+    }
+    .gevinstercontent p {
+    font-size: 1rem;
+    }
+
+    .gevinstercontentright h3{
+        width: 11rem;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til gevinster siden dette virker kun når skærmstørrelsen er lige med eller mindre end 550px*/
+
+@media only screen and (max-width: 550px) {
+    .gevinstercontent {
+        flex-direction: column;
+        align-items: center;
+        
+        height: 19rem;
+    }
+
+    .gevinstercontent h3 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .gevinstercontent p {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .finddinforhandler p {
+        font-size: 1.5rem;
+        width: 230px;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/

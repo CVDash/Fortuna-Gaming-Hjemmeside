@@ -1,0 +1,122 @@
+/*CSS KODE TIL ALLE SIDERS HEADER VIDEO OG LAYOUT*/
+
+
+/*KODEN TIL HEADER VIDEOERS CONTAINER*/
+
+.videocontainer, .ansvarlighedvideocontainer, .kontaktvideocontainer, .produktvideocontainer, .blivkundevideocontainer, 
+.findbutikvideocontainer, .spilvideocontainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.videocontainer video {
+    object-fit: cover;
+    object-position: center 25%;
+    
+    z-index: 2;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*KODEN TIL HEADER VIDEOS OVERLAY*/
+
+#videooverlay {
+position: absolute;
+z-index: 2;
+margin: 0;
+transform: translate(-50%, -50%);
+width: 85%;
+text-align: center;
+top: 50%;
+left: 50%;
+background-color: #99999928;
+font-size: 2.4rem;
+color: #f4c034;
+border-radius: 10px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*KODEN TIL CENTERING AF HEADER VIDEOER PÅ ALLE SIDER*/
+
+.ansvarlighedvideocontainer video {
+    object-fit: cover;
+    object-position: center center;
+    
+    z-index: 1;
+}
+
+.kontaktvideocontainer video {
+    object-fit: cover;
+    object-position: center 25%;
+    
+    z-index: 1;
+}
+
+.produktvideocontainer video {
+    object-fit: cover;
+    object-position: center 30%;
+    
+    z-index: 1;
+}
+
+
+
+#videooverlay h1 {
+    margin-bottom: 0;
+}
+
+.blivkundevideocontainer video {
+    object-fit: cover;
+    object-position: center 65%;
+    
+    z-index: 1;
+}
+
+.findbutikvideocontainer video {
+    object-fit: cover;
+    object-position: center 65%;
+    
+    z-index: 1;
+}
+
+.spilvideocontainer video {
+    object-fit: cover;
+    object-position: center 45%;
+    
+    z-index: 1;
+}
+/*------------------------------------------------------------------------------------------------*/
+
+/*RESPONSIV DEL AF HEADER, ÆNDRER STØRRELSE AF ORD NÅR SKÆRMSTØRRELSE ER MINDRE END 1180px, 720px og 440px*/
+
+@media only screen and (max-width:1180px) {
+    #videooverlay {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width:720px) {
+    #videooverlay {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width:440px) {
+    #videooverlay {
+        font-size: 1.4rem;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+

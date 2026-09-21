@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /images/
+Disallow: /pages/checkingcookies.html
+Disallow: /pages/templategevinster.html
+Disallow: /pages/templatekontakt.html
+Disallow: /pages/checkingcookies.js
+Disallow: /pages/templateledigestillinger.html
+Disallow: /pages/404.html

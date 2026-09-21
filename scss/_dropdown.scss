@@ -1,0 +1,35 @@
+/*Koden til dropdown når man trykker på de tre linjer på mobilen*/
+
+
+#dropdown {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 5;
+    max-width: 100%;
+    width: auto;
+    height: 950px;
+    align-items: center;
+    background-color: #18183b;
+    gap: 30px;
+    padding-top: 100px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#dropdown a:hover {
+    color: #A82222;
+}
+
+/*Koden til alle navigation links font størrelse og farve*/
+
+.dropdownclass a {
+    
+    color: #f4c034;
+    font-size: 40px;
+}
+
+
+

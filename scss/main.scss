@@ -1,0 +1,25 @@
+/*SCSS HOVEDFIL DETTE IMPORTERES ALLE ANDRE SCSS FILER OG SENDER DEM TIL main.css*/
+
+/*HVIS DU VIL GERNE TILFØJE EN NY SCSS FIL SÅ SKRIV DEN SOM "_(FILNAVN).scss" UNDER SCSS MAPPEN OG KOPIERE DEN FØLGENDE TEMPLATE I DEN HER FIL*/
+/*@import "FILNAVN";*/
+
+@import "nav";
+@import "header";
+@import "base";
+@import "dropdown";
+@import "produkter";
+@import "kontaktfooter";
+@import "footer";
+@import "spillemaskine";
+@import "tekniske";
+@import "kontakt";
+@import "ansvarlighed";
+@import "indexcontent";
+@import "ansvarlighedlinks";
+@import "gevinster";
+@import "ledigestillinger";
+@import "spilmedomtanke";
+@import "blivkunde";
+@import "galleri";
+@import "spil";
+@import "maps";

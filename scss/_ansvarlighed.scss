@@ -1,0 +1,77 @@
+/*KODE TIL ANSVARLIGHEDS SIDE / STRUKTUR KODE FINDES IND I KONTAKT.SCSS*/
+
+/* Kode til Stopspillet container og logo */
+
+.stopspillet {
+    display: flex;
+    justify-content: center;
+    
+}
+.stopspillet img {
+    
+    width: 900px;
+}
+/*-----------------------------------------------------------------------------------------*/
+
+/* Kode til alle links til StopSpillet, Danske Spil test og tlf. nr. til Spillemyndigheden */
+
+.spilletlink {
+border-bottom: 2px solid white;
+color: white;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/*Kode til Information om spil på spilautomater link*/
+
+.informationtitel {
+    text-align: center;
+    color: white; 
+}
+
+.informationtitel h1{
+    margin-top: 0;
+}
+
+.informationtitel h1:hover{
+    color: #991d1b;
+}
+/*-----------------------------------------------------------------------------------------*/
+
+/*Kode dette ændrer nogle af koderne opad kun på skærmstørrelser lige med og under 950px*/
+
+@media only screen and (max-width:950px) {
+.stopspillet img {
+    width: 600px;
+}
+
+.informationtitel {
+    font-size: 1.5rem;
+}
+}
+
+/*Kode dette ændrer nogle af koderne opad kun på skærmstørrelser lige med og under 650px*/
+
+@media only screen and (max-width:650px) {
+    .stopspillet img {
+        width: 450px;
+    }
+
+    .informationtitel {
+        font-size: 1.1rem;
+    }
+ 
+ }
+
+ /*Kode dette ændrer nogle af koden opad kun på skærmstørrelse lige med og under 470px*/
+
+ @media only screen and (max-width:470px) {
+    .stopspillet img {
+        width: 300px;
+    }
+
+    .informationtitel {
+        font-size: 0.8rem;
+    }
+ }
+    /*-----------------------------------------------------------------------------------------*/

@@ -1,0 +1,117 @@
+/*Kode til struktur af "Spil med omtanke" del på alle sider*/
+
+.spilmedomtanke {
+color: #f4c034;
+text-align: center;
+margin: 0 auto;
+background-color: #181836;
+border-top: 2px solid #f4c034;
+padding: 30px 30px;
+}
+
+.spilmedomtanke h2 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.spilmedomtanke h3 {
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+.spilmedomtanke p {
+    font-size: 2rem;
+}
+
+.spilmedomtanke a {
+    color: #f4c034;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til "Spil med omtanke" containeren*/
+
+.spilmedomtankecontentcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til "Spil med omtanke" kasser*/
+
+.spilmedomtankecontentbox {
+    border-radius: 0.8rem;
+    width: 218px;
+    height: 180px;
+    background-color: #3a3a7e;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.spilmedomtankecontentbox:hover {
+    background-color: #6b0f0f;
+    transition: background-color 0.2s;
+}
+
+.spilmedomtankecontentbox img {
+    max-width: 139px;
+    height: 70px;
+}
+
+.spilmedomtankecontentbox p {
+    font-size: 1rem;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til "Spil med omtanke"s "Læs mere her" knap*/
+.laesmereher {
+    justify-content: center;
+    display: flex;
+    padding: 0 20px;
+}
+
+.laesmereher p{
+    border-bottom: 2px solid #f4c034;
+    text-align: center;
+    }
+
+.laesmereher p:hover {
+color: #A82222;
+border-bottom: 2px solid #A82222;
+transition: all 0.2s;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 1160px*/
+
+@media only screen and (max-width:1160px) {
+.spilmedomtankecontentbox {
+    width: 350px;
+}
+.spilmedomtankecontentcontainer {
+    gap: 40px;
+}
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 450px*/
+
+@media only screen and (max-width:450px) {
+.spilmedomtankecontentbox {
+    width: 250px;
+}
+}
+
+/*------------------------------------------------------------------------------------------------*/

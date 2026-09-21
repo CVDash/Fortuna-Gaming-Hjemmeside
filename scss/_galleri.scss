@@ -1,0 +1,29 @@
+/*Kode til galleri containeren*/
+
+.gallericontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+    padding: 20px 40px;
+}
+
+.gallericontainer img{
+    max-width: 800px;
+    max-height: 40rem;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til hver enkelt galleri element*/
+
+.galleri1, .galleri2, .galleri3, .galleri4, .galleri5, .galleri6, .galleri7, .galleri8, .galleri9, .galler10 {
+    padding-bottom: 50px;
+    width: 36rem;
+    text-align: center;
+    flex: 33.3%;
+}
+
+
+
+/*------------------------------------------------------------------------------------------------*/

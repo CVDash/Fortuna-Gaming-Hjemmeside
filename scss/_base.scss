@@ -1,0 +1,29 @@
+/*KODEN TIL ALLE SIDER DETTE HJEMMESIDEN BRUGER*/
+/*Sidernes font*/
+
+@font-face { font-family: Metropolis; src: url(/misc/Metropolis-Regular.otf); }
+
+/*Kode til sidernes hovedstruktur*/
+
+html, body {
+    margin: 0;
+    height: 100%;
+   overflow-x: hidden;
+   scrollbar-color: #18183b #f4c034;
+}
+
+/*Sidernes container*/
+
+.container {
+    font-family: Metropolis, sans-serif;
+    font-weight: normal;
+    font-style: normal; 
+   font-size: 0;
+   
+}
+
+/*Sletter hyperlinks underline*/
+
+a {
+    text-decoration: none;
+}

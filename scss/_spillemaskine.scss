@@ -1,0 +1,196 @@
+/*Kode til spillemaskinernes enkelte sider - de "om maskinen" og tekniske beskrivelser kode kan findes på _tekniske.scss*/
+
+/*Kode til spillemaskinernes struktur*/
+.spillemaskinecontent {
+    background-color: #18183b;
+    width: 100%;
+    
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til spillemaskinernes container*/
+
+.spillemaskinecontainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 35px;
+    border-bottom: 1px solid #f4c034;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til spillemaskinernes titel*/
+
+.spillemaskinetitel {
+    font-size: 3rem;
+    text-align: center;
+    color: #f4c034;
+    margin: 0;
+    padding-top: 50px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til de venstre og højre spillemaskine billeder*/
+
+.spillemaskinevenstre, .spillemaskinehojre {
+    width: 300px;
+   
+}
+
+.spillemaskinevenstre img, .spillemaskinehojre img {
+    width: 300px;
+    height: 800px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til spillemaskinen dette spiller videoer på*/
+
+.spillemaskinevideo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.spillemaskinevideo img{
+    width: 500px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til den spillemaskiners billede dette spilles videoer på*/
+
+.claritybackground, .uprightbackground, .superboxbackground {
+    position: relative;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til videoer dette spiller på Clarity spillemaskinen ned i bunden af Claritys side*/
+
+#clarityoverlaybottom {
+    position: absolute;
+    margin: 0;
+transform: translate(-50%, 20%);
+width: 67%;
+height: 24%;
+top: 50%;
+left: 50%;
+object-fit: cover;
+border-radius: 5px;
+}
+
+#clarityoverlaytop {
+    position: absolute;
+    margin: 0;
+transform: translate(-50%, -88%);
+width: 64%;
+height: 28%;
+top: 50%;
+left: 50%;
+border-radius: 5px;
+object-fit: cover;
+}
+
+#clarityoverlayupper {
+    position: absolute;
+    margin: 0;
+transform: translate(-50%, -219%);
+width: 64%;
+height: 21.2%;
+top: 50%;
+left: 50%;
+object-fit: cover;
+border-radius: 5px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til videoer dette spiller på Superbox spillemaskinen ned i bunden af Superboxs side*/
+
+#superboxoverlaybottom {
+    position: absolute;
+    margin: 0;
+transform: translate(-50%, 10%);
+width: 71.5%;
+height: 26%;
+top: 50%;
+left: 50%;
+object-fit: cover;
+border-radius: 5px;
+}
+
+#superboxoverlaytop {
+    position: absolute;
+    margin: 0;
+transform: translate(-50%, -105%);
+width: 68%;
+height: 27%;
+top: 50%;
+left: 50%;
+border-radius: 2px;
+object-fit: cover;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til videoer dette spiller på Upright spillemaskinen ned i bunden af Uprights side*/
+
+
+#uprightoverlaybottom {
+    position: absolute;
+    margin: 0;
+transform: translate(-50%, -12%);
+width: 68.2%;
+height: 29.3%;
+top: 50%;
+left: 50%;
+object-fit: cover;
+border-radius: 5px;
+}
+
+#uprightoverlaytop {
+    position: absolute;
+    margin: 0;
+transform: translate(-50%, -120%);
+width: 68.2%;
+height: 28%;
+top: 50%;
+left: 50%;
+border-radius: 5px;
+object-fit: cover;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 1800px*/
+
+@media only screen and (max-width: 1600px) {
+
+.spillemaskinecontainer {
+display: block;
+padding: 50px;
+}
+
+.spillemaskinecontainer iframe{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    border: 0; 
+    width:100%; 
+    height: 500px; 
+    overflow: auto;
+}
+
+.spillemaskinevenstre, .spillemaskinehojre {
+    display: none;
+}
+}
+    
+/*------------------------------------------------------------------------------------------------*/
+

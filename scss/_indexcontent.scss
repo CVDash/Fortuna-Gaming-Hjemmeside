@@ -1,0 +1,219 @@
+/*Kode til hovedsidens baggrund farve, font størrelse og farve*/
+
+.indexnavigation {
+    margin: 0;
+    top: 0;
+    background-color: #181836;
+    font-size: 2rem;
+    position:relative;
+}
+
+.indexnavigation p{
+    color: #f4c034;
+    font-size: 2rem;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.indexnavigation h2{
+    color: #f4c034;
+    font-size: 5rem;
+    text-align: center;
+    margin: 0;
+    pointer-events: none;
+    text-shadow: 2px 2px 2px black;
+}
+
+
+
+.indexnavigation i{
+    color:#181836;
+    font-size: 1.025rem;
+}
+
+/*Kode til index container*/
+
+.indexcontainer {
+    text-align: center;
+    padding: 100px 50px 100px 50px;
+    z-index: 1;
+    position: relative;
+}
+
+
+
+.indexcontainer img{
+    width:  100%;
+    height: 550px;
+    
+}
+
+
+.indexcontainer ul {
+    display: table;
+    list-style-position: inside;
+    margin: 0 auto;
+    padding: 20px 50px;
+    padding-bottom: 30px;
+    max-width: 1000px;
+}
+
+.indexcontainer li {
+    color: white;
+    padding-bottom: 10px;
+    text-align: left;
+    
+}
+
+/*Kode til hver enkelt element ind i containeren*/
+
+
+
+.index1, .index2, .index3 {
+    position: relative;
+    filter: grayscale(30%);
+}
+
+
+.index1 img, .index2 img {
+    
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.index3 img {
+    
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+.index1:hover, .index2:hover, .index3:hover {
+    filter: grayscale(0%);
+    transition: filter 0.2s; 
+}
+
+
+#indexoverlay1, #indexoverlay2, #indexoverlay3 {
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+transform: translate(-50%, -50%);
+text-align: center;
+top: 50%;
+left: 50%;
+color: rgba(255, 255, 255, 0.5);
+}
+
+/*Kode til at vise cirkel billedet på hovedsiden*/
+
+.circle-left {
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    transform: translate(0%, -50%);
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 0%;
+}
+
+.circle-right {
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    transform: translate(-100%, -50%);
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 100%;
+}
+
+
+
+/*Kode til at ikke vise mobil billeder når man er på computeren*/
+
+
+.mobilcontent {
+    display: none;
+}
+
+
+
+/*Kode til at skifte computer billeder med deres mobil versioner når skærmstørrelsen er mindre end 1279px*/
+
+@media only screen and (max-width: 1279px) {
+    .mobilcontent {
+        display: block;
+    }
+
+    .computercontent {
+        display: none;
+    }
+}
+
+/*Kode til headeren når skærmstørrelsen er mindre end 1180px*/
+
+@media only screen and (max-width: 1180px) {
+    .indexcontainer h2 {
+        font-size: 4rem;
+        
+    }
+
+    .indexcontainer {
+        padding-top: 110px;
+    }
+}
+
+
+/*Kode til headeren når skærmstørrelsen er mindre end 900px*/
+
+@media only screen and (max-width: 900px) {
+    .indexcontainer h2 {
+        font-size: 3.5rem;
+    }
+
+    .indexcontainer {
+        padding-top: 120px;
+    }
+}
+
+
+/*Kode til headeren når skærmstørrelsen er mindre end 800px*/
+
+@media only screen and (max-width: 900px) {
+    .indexcontainer h2 {
+        font-size: 2rem;
+    }
+
+    .indexcontainer {
+        padding-top: 150px;
+    }
+}
+
+/*Kode til at ændre sidens struktur og layout når skærmstørrelsen er mindre end 650px*/
+
+
+@media only screen and (max-width: 650px) {
+    #indexoverlay1 h2, #indexoverlay2 h2, #indexoverlay3 h2 {
+    font-size: 3rem;
+    }
+
+    .indexnavigation p, .indexnavigation li {
+        font-size: 1.5rem;
+    }
+
+    .indexnavigation li {
+        padding-bottom: 10px;
+    }
+
+    .index2 img {
+        object-position: 30% 25%;
+    }
+}
+
+
+
+
+
+

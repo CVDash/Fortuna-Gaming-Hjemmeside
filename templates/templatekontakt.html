@@ -1,0 +1,46 @@
+<div class="kontakt(nummer)">
+    <a href="mailto:(email)"><h2 class="boldtext">*Navn*</h2></a>
+    <a href="mailto:(email)"><img src="img/(billede.jpg eller .png eller .webp)" alt="(person) Billede"></a>
+    <p>*Hvad de laver/Deres afdeling*</p>
+    
+    <a href="mailto:(email)"><p class="email">*Email*</p></a>
+    <a class="adressehover" href="tel:(mobil)"><p>Tlf: *Mobil*</p></a>
+</div>
+
+Tilføj den her template til kontakt.html og kontaktEN.html under div class "kontaktcontainer"
+
+Alt med () og ** skal ændres
+
+Kontakt nummer skal udfyldes og tilføjes til kontakt.scss ind i koden med alle .kontakt(nummer) classes
+F. eks. 
+
+.kontakt1, .kontakt2, .kontakt3, .kontakt4, .kontakt5, .kontakt(nummer){
+    padding-bottom: 50px;
+    width: 36rem;
+    text-align: center;
+}
+
+
+.kontakt1 img, .kontakt2 img, .kontakt3 img, .kontakt4 img, .kontakt5 img, .kontakt(nummer) img {
+    filter: grayscale(50%);
+    
+}
+
+.kontakt1 img:hover, .kontakt2 img:hover, .kontakt3 img:hover, .kontakt4 img:hover, .kontakt5 img:hover, .kontakt(nummer) img {
+    filter: grayscale(0%);
+    transition: filter 0.2s; 
+}
+
+-------------------------------------------------------------------------------------------------------------------
+OBS - Ansvarlighed links er linket på den samme kontakt(nummer) class som Kontakt links, det er en god ide til at tilføje noget til ansvarlighedcontainer på ansvarlighed.html og 
+ansvarlighedEN.html også når du tilføjer en anden person på kontakt siden.
+
+OBS2 - Når kontakt og ansvarlighed classer går op til 6 eller 9 du skal slette den følgende kode fra kontaktcontainer 
+
+.kontakt4{
+    padding-left: 18rem;
+}
+
+.kontakt5{
+    padding-right: 18rem;
+}

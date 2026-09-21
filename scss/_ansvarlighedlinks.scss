@@ -1,0 +1,66 @@
+/*KODEN TIL ANSVARLIGT SPIL, MYTER OG FAKTA, BEHANDLING, GODE VANER OG SPILLEVANER SIDER*/
+
+.ansvarlighedlinkscontainer {
+    padding-bottom: 2rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+.ansvarlighedlinkscontainer p{
+    margin-bottom: 0;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.ansvarlighedlinkscontainer h3 {
+    color: white;
+}
+
+.ansvarlighedlinkscontainer li{
+color: #18183b;
+list-style-type: "> ";
+line-height: 2rem;
+}
+
+/*Koden til de samme som opad, men kun til skærmstørrelsen det er lige med eller mindre end 950px*/
+
+@media only screen and (max-width:950px) {
+    .ansvarlighedlinkscontainer {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .ansvarlighedlinkscontainer h3 {
+        font-size: 2rem;
+    }
+}
+
+/*Koden til de samme som opad, men kun til skærmstørrelsen det er lige med eller mindre end 650px*/
+
+@media only screen and (max-width:650px) {
+    .ansvarlighedlinkscontainer {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .ansvarlighedlinkscontainer h3 {
+        font-size: 1.5rem;
+    }
+
+    .ansvarlighedlinkscontainer p, .ansvarlighedlinkscontainer li{
+        font-size: 1.3rem;
+    }
+}
+
+/*Koden til de samme som opad, men kun til skærmstørrelsen det er lige med eller mindre end 450px*/
+
+@media only screen and (max-width:450px) {
+    .ansvarlighedlinkscontainer {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .ansvarlighedlinkscontainer h3 {
+        font-size: 1rem;
+    }
+}

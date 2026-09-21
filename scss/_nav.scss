@@ -1,0 +1,255 @@
+
+/*KODE TIL NAVIGATION CONTAINER, DE LOGO OG DE LINKS OP I TOPPEN AF ALLE HJEMMESIDENS SIDER*/
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 9px 30px;
+    align-items: center;
+    background-color: #181836;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    z-index: 3;
+    border-bottom: 2px solid #f4c034;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*KODE TIL LOGO*/
+
+.logo {
+padding:5px;
+}
+
+
+.logo img {
+    width: 120px;
+    filter: grayscale(30%);
+    
+}
+
+.logo img:hover {
+    filter: grayscale(0);
+    transition: filter 0.2;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*KODE TIL DE 3 LINJER DETTE ÅBNER DROPDOWN PÅ MOBILEN*/
+
+.burgermenu i {
+font-size: 40px;
+color: #f4c034;
+display: block;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*KODE TIL NAV LINKS PÅ COMPUTEREN*/
+
+.computernav {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+.computernav a {
+    text-decoration: none;
+    color: #f4c034;
+    font-size: 20px;
+}
+
+.computernav a:hover {
+    color: #A82222;
+    transition: color 0.2s;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*KODE TIL PRODUKT NAVS DROPDOWN*/
+
+.produktcontainer {
+    
+    display: inline-block;
+}
+
+
+
+
+.produktdropdown {
+    display: none;
+    flex-direction:column;
+    position:absolute;
+    background-color: #3a3a7e;
+    border-radius: 0.8rem;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:5px;
+    transform: translate(-20%,-65%);
+}
+
+.produktdropdownEN {
+    display: none;
+    flex-direction:column;
+    position:absolute;
+    background-color: #3a3a7e;
+    border-radius: 0.8rem;
+    padding-left:8px;
+    padding-right:8px;
+    padding-bottom:5px;
+    transform: translate(-35%,-65%);
+}
+
+
+.produktdropdown a {
+    padding-top: 5px;
+    text-align: center;
+    
+}
+
+.produktdropdownEN a {
+    padding-top: 5px;
+    text-align: center;
+    
+}
+
+
+.produktcontainer:hover .produktdropdown {
+    display: flex;
+   
+}
+
+.produktcontainer:hover .produktdropdownEN {
+    display: flex;
+   
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------*/
+
+
+/*KODE TIL KUNDE NAVS DROPDOWN*/
+
+.kundecontainer {
+    
+    display: inline-block;
+}
+
+
+
+
+.kundedropdown {
+    display: none;
+    flex-direction:column;
+    position:absolute;
+    background-color: #3a3a7e;
+    border-radius: 0.8rem;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:5px;
+    transform: translate(-5%,-65%);
+}
+
+
+
+
+.kundedropdown a {
+    padding-top: 5px;
+    text-align: center;
+    
+}
+
+
+
+
+.kundecontainer:hover .kundedropdown {
+    display: flex;
+   
+}
+
+.kundecontainer:hover .kundedropdownEN {
+    display: flex;
+   
+}
+
+
+
+
+
+/*KODE TIL PRODUKT NAVS DROPDOWN*/
+
+.kontaktoscontainer {
+    
+    display: inline-block;
+}
+
+
+
+
+.kontaktosdropdown {
+    display: none;
+    flex-direction:column;
+    position:absolute;
+    background-color: #3a3a7e;
+    border-radius: 0.8rem;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:5px;
+    transform: translate(-5%,-65%);
+}
+
+
+
+
+.kontaktosdropdown a {
+    padding-top: 5px;
+    text-align: center;
+    
+}
+
+
+
+
+.kontaktoscontainer:hover .kontaktosdropdown {
+    display: flex;
+   
+}
+
+.kontaktoscontainer:hover .kontaktosdropdownEN {
+    display: flex;
+   
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/*RESPONSIV DEL AF KODEN - LUKKER NAV LINKS OG ÅBNER DE TRE LINJER PÅ MOBILEN ELLER SLETTER DE TRE LINJER OG ÅBNER NAV LINKS PÅ COMPUTEREN*/
+
+@media only screen and (min-width: 1279px) {
+    .burgermenu {
+        display: none;
+    }
+
+    #dropdown {
+        display: none;
+    }
+    .computernav {
+        display: flex;
+    }
+}
+@media only screen and (max-width: 1279px) {
+    .burgermenu {
+        display: block;
+    }
+    .computernav {
+        display: none;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/

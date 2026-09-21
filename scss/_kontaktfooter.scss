@@ -1,0 +1,307 @@
+/*Kode til struktur af virksomhedens kort adresse og detaljer i bunden af siderne*/
+
+.kontaktos {
+    background-color: #181836;
+    margin: 0;
+    font-size: 1.75rem;
+    color: #f4c034;
+    font-weight: 300;
+    padding: 2rem 3rem;
+    text-align: center;
+}
+
+
+
+.kontaktos h1{
+    padding: 5px 20px;
+}
+
+.kontaktos p {
+    line-height: 3rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    
+}
+
+.kontaktos a{
+    
+    color: #f4c034;
+}
+
+.kontaktos h3{
+    font-size: 1.25rem;
+    color: #3B4844;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til kort og detaljer container*/
+
+.kortcontainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 22rem;
+    
+
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til detaljer container*/
+
+.adressecontainer {
+    
+    font-size: 1.8rem;
+    text-align: left;
+    max-width: 400px;
+}
+
+.adressecontainer p {
+    color: #f4c034;
+    line-height: 4rem;
+}
+
+.adressecontainer i{
+color: #f4c034;
+text-align: center;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til detaljers hover effekt*/
+
+.adressehover p:hover {
+    color: #A82222;
+    transition: color 0.2s;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til social mediers ikoner*/
+
+.adresselinkcontainericon {
+display: flex;
+gap: 17px;
+font-size: 3rem;
+}
+
+.cvdash:hover {
+    background: -webkit-linear-gradient(#da2d72, #fec214, #da2d72, #fec214);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.2s;
+}
+
+.gmail:hover {
+    background: -webkit-linear-gradient(#4285F4, #EA4335, #34A853);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.2s;
+}
+
+.facebook:hover {
+    color: #1877F2;
+    transition: color 0.2s;
+}
+
+.github:hover {
+    color: #238636;
+    transition: color 0.2s;
+}
+.linkedin:hover {
+    color: #0073b1;
+    transition: color 0.2s;
+}
+.instagram:hover {
+    background: -webkit-linear-gradient(#405DE6, #C13584, #F56040, #FFDC80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.2s;
+}
+.proff:hover {
+    color: #7E4181;
+    transition: color 0.2s;
+}
+.trustpilot:hover {
+    color: #9ff6d3;
+    transition: color 0.2s;
+}
+.jobindex:hover {
+    color: #b41018;
+    transition: color 0.2s;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til den "En del af Danske Spil" sektion*/
+
+.danskespil {
+    font-size: 3rem;
+    line-height: 2rem;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+.danskespil a:hover {
+color: #ffb600;
+transition: color 0.2s;
+}
+
+.danskespil img {
+    width: 40px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til italics teksten under de sociale medier ikoner*/
+
+.adresselinkdisclaimer i {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til tekst ind i kort containeren dette vises når cookies er ikke accepteret*/
+
+.kortoverlaycontainer {
+    position: relative;
+    width: 60%;
+    z-index: 1;
+}
+
+#kortoverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/*Koden dette virker kun når skærmstørrelsen er lige med eller mindre end 1830px*/
+
+@media only screen and (max-width: 1830px) {
+    .kortcontainer {
+        padding: 20px 16rem;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Koden dette virker kun når skærmstørrelsen er lige med eller mindre end 1640px*/
+
+@media only screen and (max-width: 1640px) {
+    .kortcontainer {
+        padding: 20px 12rem;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Koden dette virker kun når skærmstørrelsen er lige med eller mindre end 1520px*/
+
+@media only screen and (max-width: 1520px) {
+    .kortcontainer {
+        padding: 20px 8rem;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Koden dette virker kun når skærmstørrelsen er lige med eller mindre end 1400px*/
+
+@media only screen and (max-width: 1400px) {
+    .kortcontainer {
+        padding: 20px 4rem;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Koden dette virker kun når skærmstørrelsen er lige med eller mindre end 1280px*/
+
+@media only screen and (max-width: 1280px) {
+    .kortcontainer {
+        padding: 20px 0.1rem;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+/*Koden dette virker kun når skærmstørrelsen er lige med eller mindre end 1140px*/
+
+
+@media only screen and (max-width: 1140px) {
+    .kortcontainer {
+        flex-direction: column;
+        padding: 10px 0;
+        align-items: center;
+    }
+
+    .adressecontainer {
+        text-align: center;
+    }
+
+    .kontaktos p {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    .kontaktos h1{
+        font-size: 2.5rem;
+        padding-bottom: 25px;
+        border-bottom: 1px solid white;
+    }
+
+    .adresselinkcontainericon {
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+
+    .kortoverlaycontainer {
+        display: none;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Koden dette virker kun når skærmstørrelsen er lige med eller mindre end 850px*/
+
+@media only screen and (max-width: 850px) {
+    
+
+    .kontaktos p {
+        font-size: 1.3rem;
+    }
+
+    .adresselinkcontainericon i {
+        font-size: 2rem;
+        
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Koden dette virker kun når skærmstørrelsen er lige med eller mindre end 450px*/
+
+@media only screen and (max-width: 450px) {
+
+    .kontaktos {
+        padding: 2rem 1rem;
+    }
+    .danskespil {
+        padding: 2px 0;
+        gap: 10px;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------*/

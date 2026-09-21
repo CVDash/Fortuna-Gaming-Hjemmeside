@@ -1,0 +1,46 @@
+/*Kode til ledige stillinger sides container*/
+
+.ledighedscontainer {
+    padding-bottom: 2rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+.ledighedscontainer p, .ledighedscontainer li, .ledighedscontainer i{
+    font-size: 2rem;
+    color: #c3d4cf;
+}
+
+.ledighedscontainer h3 {
+    color: white;
+    padding-top: 40px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til linjen på bunden af stilling tekst før italics teksten*/
+
+.ledighedtext {
+    border-bottom: 2px solid white;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode til italics teksten*/
+
+.ledigheditalics {
+    padding-top: 30px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*Kode dette svarer til skærmstørrelse dette er lige med eller mindre end 1000px*/
+
+@media only screen and (max-width: 1000px) {
+    .ledighedscontainer {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+}
+
+/*------------------------------------------------------------------------------------------------*/

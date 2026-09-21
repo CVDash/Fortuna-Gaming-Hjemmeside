@@ -1,0 +1,14 @@
+{
+  "name": "elite-gaming",
+  "version": "1.0.0",
+  "description": "Hjemmeside Redesign",
+  "main": "index.js",
+  "scripts": {
+    "test": "sass scss:css --watch"
+  },
+  "author": "Rares Cosmin Valeanu",
+  "license": "ISC",
+  "dependencies": {
+    "flag-icons": "^7.5.0"
+  }
+}

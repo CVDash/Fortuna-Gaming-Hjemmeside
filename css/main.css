@@ -1,0 +1,2024 @@
+@charset "UTF-8";
+/*SCSS HOVEDFIL DETTE IMPORTERES ALLE ANDRE SCSS FILER OG SENDER DEM TIL main.css*/
+/*HVIS DU VIL GERNE TILFØJE EN NY SCSS FIL SÅ SKRIV DEN SOM "_(FILNAVN).scss" UNDER SCSS MAPPEN OG KOPIERE DEN FØLGENDE TEMPLATE I DEN HER FIL*/
+/*@import "FILNAVN";*/
+/*KODE TIL NAVIGATION CONTAINER, DE LOGO OG DE LINKS OP I TOPPEN AF ALLE HJEMMESIDENS SIDER*/
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 30px;
+  align-items: center;
+  background-color: #181836;
+  position: sticky;
+  overflow: hidden;
+  top: 0;
+  z-index: 3;
+  border-bottom: 2px solid #f4c034;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*KODE TIL LOGO*/
+.logo {
+  padding: 5px;
+}
+
+.logo img {
+  width: 120px;
+  filter: grayscale(30%);
+}
+
+.logo img:hover {
+  filter: grayscale(0);
+  transition: filter 0.2;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*KODE TIL DE 3 LINJER DETTE ÅBNER DROPDOWN PÅ MOBILEN*/
+.burgermenu i {
+  font-size: 40px;
+  color: #f4c034;
+  display: block;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*KODE TIL NAV LINKS PÅ COMPUTEREN*/
+.computernav {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+.computernav a {
+  text-decoration: none;
+  color: #f4c034;
+  font-size: 20px;
+}
+
+.computernav a:hover {
+  color: #A82222;
+  transition: color 0.2s;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*KODE TIL PRODUKT NAVS DROPDOWN*/
+.produktcontainer {
+  display: inline-block;
+}
+
+.produktdropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: #3a3a7e;
+  border-radius: 0.8rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  transform: translate(-20%, -65%);
+}
+
+.produktdropdownEN {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: #3a3a7e;
+  border-radius: 0.8rem;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 5px;
+  transform: translate(-35%, -65%);
+}
+
+.produktdropdown a {
+  padding-top: 5px;
+  text-align: center;
+}
+
+.produktdropdownEN a {
+  padding-top: 5px;
+  text-align: center;
+}
+
+.produktcontainer:hover .produktdropdown {
+  display: flex;
+}
+
+.produktcontainer:hover .produktdropdownEN {
+  display: flex;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*KODE TIL KUNDE NAVS DROPDOWN*/
+.kundecontainer {
+  display: inline-block;
+}
+
+.kundedropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: #3a3a7e;
+  border-radius: 0.8rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  transform: translate(-5%, -65%);
+}
+
+.kundedropdown a {
+  padding-top: 5px;
+  text-align: center;
+}
+
+.kundecontainer:hover .kundedropdown {
+  display: flex;
+}
+
+.kundecontainer:hover .kundedropdownEN {
+  display: flex;
+}
+
+/*KODE TIL PRODUKT NAVS DROPDOWN*/
+.kontaktoscontainer {
+  display: inline-block;
+}
+
+.kontaktosdropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: #3a3a7e;
+  border-radius: 0.8rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  transform: translate(-5%, -65%);
+}
+
+.kontaktosdropdown a {
+  padding-top: 5px;
+  text-align: center;
+}
+
+.kontaktoscontainer:hover .kontaktosdropdown {
+  display: flex;
+}
+
+.kontaktoscontainer:hover .kontaktosdropdownEN {
+  display: flex;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*RESPONSIV DEL AF KODEN - LUKKER NAV LINKS OG ÅBNER DE TRE LINJER PÅ MOBILEN ELLER SLETTER DE TRE LINJER OG ÅBNER NAV LINKS PÅ COMPUTEREN*/
+@media only screen and (min-width: 1279px) {
+  .burgermenu {
+    display: none;
+  }
+  #dropdown {
+    display: none;
+  }
+  .computernav {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 1279px) {
+  .burgermenu {
+    display: block;
+  }
+  .computernav {
+    display: none;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*CSS KODE TIL ALLE SIDERS HEADER VIDEO OG LAYOUT*/
+/*KODEN TIL HEADER VIDEOERS CONTAINER*/
+.videocontainer, .ansvarlighedvideocontainer, .kontaktvideocontainer, .produktvideocontainer, .blivkundevideocontainer,
+.findbutikvideocontainer, .spilvideocontainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.videocontainer video {
+  object-fit: cover;
+  object-position: center 25%;
+  z-index: 2;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*KODEN TIL HEADER VIDEOS OVERLAY*/
+#videooverlay {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(153, 153, 153, 0.1568627451);
+  font-size: 2.4rem;
+  color: #f4c034;
+  border-radius: 10px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*KODEN TIL CENTERING AF HEADER VIDEOER PÅ ALLE SIDER*/
+.ansvarlighedvideocontainer video {
+  object-fit: cover;
+  object-position: center center;
+  z-index: 1;
+}
+
+.kontaktvideocontainer video {
+  object-fit: cover;
+  object-position: center 25%;
+  z-index: 1;
+}
+
+.produktvideocontainer video {
+  object-fit: cover;
+  object-position: center 30%;
+  z-index: 1;
+}
+
+#videooverlay h1 {
+  margin-bottom: 0;
+}
+
+.blivkundevideocontainer video {
+  object-fit: cover;
+  object-position: center 65%;
+  z-index: 1;
+}
+
+.findbutikvideocontainer video {
+  object-fit: cover;
+  object-position: center 65%;
+  z-index: 1;
+}
+
+.spilvideocontainer video {
+  object-fit: cover;
+  object-position: center 45%;
+  z-index: 1;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*RESPONSIV DEL AF HEADER, ÆNDRER STØRRELSE AF ORD NÅR SKÆRMSTØRRELSE ER MINDRE END 1180px, 720px og 440px*/
+@media only screen and (max-width: 1180px) {
+  #videooverlay {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 720px) {
+  #videooverlay {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 440px) {
+  #videooverlay {
+    font-size: 1.4rem;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*KODEN TIL ALLE SIDER DETTE HJEMMESIDEN BRUGER*/
+/*Sidernes font*/
+@font-face {
+  font-family: Metropolis;
+  src: url(/misc/Metropolis-Regular.otf);
+}
+/*Kode til sidernes hovedstruktur*/
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+  scrollbar-color: #18183b #f4c034;
+}
+
+/*Sidernes container*/
+.container {
+  font-family: Metropolis, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0;
+}
+
+/*Sletter hyperlinks underline*/
+a {
+  text-decoration: none;
+}
+
+/*Koden til dropdown når man trykker på de tre linjer på mobilen*/
+#dropdown {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  z-index: 5;
+  max-width: 100%;
+  width: auto;
+  height: 950px;
+  align-items: center;
+  background-color: #18183b;
+  gap: 30px;
+  padding-top: 100px;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#dropdown a:hover {
+  color: #A82222;
+}
+
+/*Koden til alle navigation links font størrelse og farve*/
+.dropdownclass a {
+  color: #f4c034;
+  font-size: 40px;
+}
+
+/*Kode til produktsidens struktur*/
+.contentnavigation {
+  margin: 0;
+  top: 0;
+  background-color: #181836;
+  font-size: 2rem;
+}
+
+.contentnavigation p {
+  color: #c3d4cf;
+  font-size: 1.025rem;
+}
+
+.contentnavigation h2 {
+  color: #f4c034;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.contentnavigation h2:hover {
+  color: #A82222;
+  transition: color 0.2s;
+}
+
+.contentnavigation i {
+  color: #f4c034;
+  font-size: 1.025rem;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til produktsidens container*/
+.contentcontainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+}
+
+.contentcontainer img {
+  max-width: 450px;
+  max-height: 1218px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til hver enkelt spillemaskine på produktsiden*/
+.content1, .content2, .content3 {
+  padding-bottom: 20px;
+  max-width: 450px;
+}
+
+.content1 img, .content2 img, .content3 img {
+  filter: grayscale(30%);
+}
+
+.content1 img:hover, .content2 img:hover, .content3 img:hover {
+  filter: grayscale(0%);
+  transition: filter 0.2s;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 1800px*/
+@media only screen and (max-width: 1800px) {
+  .contentcontainer img {
+    max-width: 350px;
+    max-height: 900px;
+  }
+  .content1, .content2, .content3 {
+    max-width: 350px;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 1150px*/
+@media only screen and (max-width: 1150px) {
+  .contentcontainer img {
+    max-width: 250px;
+    max-height: 600px;
+  }
+  .content1, .content2, .content3 {
+    max-width: 250px;
+  }
+  .content1 h2, .content2 h2, .content3 h2 {
+    max-width: 250px;
+    font-size: 1.5rem;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 850px*/
+@media only screen and (max-width: 850px) {
+  .contentcontainer img {
+    max-width: 150px;
+    max-height: 400px;
+  }
+  .content1, .content2, .content3 {
+    max-width: 150px;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 600px*/
+@media only screen and (max-width: 600px) {
+  .contentcontainer {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .contentcontainer img {
+    max-width: 100%;
+    max-height: 100%;
+    padding-bottom: 20px;
+  }
+  .content1, .content2, .content3 {
+    max-width: 100%;
+    border-top: 1px solid #c3d4cf;
+    padding-top: 20px;
+    align-items: center;
+  }
+  .content1 h2, .content2 h2, .content3 h2 {
+    max-width: 100%;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til struktur af virksomhedens kort adresse og detaljer i bunden af siderne*/
+.kontaktos {
+  background-color: #181836;
+  margin: 0;
+  font-size: 1.75rem;
+  color: #f4c034;
+  font-weight: 300;
+  padding: 2rem 3rem;
+  text-align: center;
+}
+
+.kontaktos h1 {
+  padding: 5px 20px;
+}
+
+.kontaktos p {
+  line-height: 3rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.kontaktos a {
+  color: #f4c034;
+}
+
+.kontaktos h3 {
+  font-size: 1.25rem;
+  color: #3B4844;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til kort og detaljer container*/
+.kortcontainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 22rem;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til detaljer container*/
+.adressecontainer {
+  font-size: 1.8rem;
+  text-align: left;
+  max-width: 400px;
+}
+
+.adressecontainer p {
+  color: #f4c034;
+  line-height: 4rem;
+}
+
+.adressecontainer i {
+  color: #f4c034;
+  text-align: center;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til detaljers hover effekt*/
+.adressehover p:hover {
+  color: #A82222;
+  transition: color 0.2s;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til social mediers ikoner*/
+.adresselinkcontainericon {
+  display: flex;
+  gap: 17px;
+  font-size: 3rem;
+}
+
+.cvdash:hover {
+  background: -webkit-linear-gradient(#da2d72, #fec214, #da2d72, #fec214);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.2s;
+}
+
+.gmail:hover {
+  background: -webkit-linear-gradient(#4285F4, #EA4335, #34A853);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.2s;
+}
+
+.facebook:hover {
+  color: #1877F2;
+  transition: color 0.2s;
+}
+
+.github:hover {
+  color: #238636;
+  transition: color 0.2s;
+}
+
+.linkedin:hover {
+  color: #0073b1;
+  transition: color 0.2s;
+}
+
+.instagram:hover {
+  background: -webkit-linear-gradient(#405DE6, #C13584, #F56040, #FFDC80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.2s;
+}
+
+.proff:hover {
+  color: #7E4181;
+  transition: color 0.2s;
+}
+
+.trustpilot:hover {
+  color: #9ff6d3;
+  transition: color 0.2s;
+}
+
+.jobindex:hover {
+  color: #b41018;
+  transition: color 0.2s;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til den "En del af Danske Spil" sektion*/
+.danskespil {
+  font-size: 3rem;
+  line-height: 2rem;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.danskespil a:hover {
+  color: #ffb600;
+  transition: color 0.2s;
+}
+
+.danskespil img {
+  width: 40px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til italics teksten under de sociale medier ikoner*/
+.adresselinkdisclaimer i {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til tekst ind i kort containeren dette vises når cookies er ikke accepteret*/
+.kortoverlaycontainer {
+  position: relative;
+  width: 60%;
+  z-index: 1;
+}
+
+#kortoverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Koden dette virker kun når skærmstørrelsen er lige med eller mindre end 1830px*/
+@media only screen and (max-width: 1830px) {
+  .kortcontainer {
+    padding: 20px 16rem;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Koden dette virker kun når skærmstørrelsen er lige med eller mindre end 1640px*/
+@media only screen and (max-width: 1640px) {
+  .kortcontainer {
+    padding: 20px 12rem;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Koden dette virker kun når skærmstørrelsen er lige med eller mindre end 1520px*/
+@media only screen and (max-width: 1520px) {
+  .kortcontainer {
+    padding: 20px 8rem;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Koden dette virker kun når skærmstørrelsen er lige med eller mindre end 1400px*/
+@media only screen and (max-width: 1400px) {
+  .kortcontainer {
+    padding: 20px 4rem;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Koden dette virker kun når skærmstørrelsen er lige med eller mindre end 1280px*/
+@media only screen and (max-width: 1280px) {
+  .kortcontainer {
+    padding: 20px 0.1rem;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Koden dette virker kun når skærmstørrelsen er lige med eller mindre end 1140px*/
+@media only screen and (max-width: 1140px) {
+  .kortcontainer {
+    flex-direction: column;
+    padding: 10px 0;
+    align-items: center;
+  }
+  .adressecontainer {
+    text-align: center;
+  }
+  .kontaktos p {
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+  .kontaktos h1 {
+    font-size: 2.5rem;
+    padding-bottom: 25px;
+    border-bottom: 1px solid white;
+  }
+  .adresselinkcontainericon {
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  .kortoverlaycontainer {
+    display: none;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Koden dette virker kun når skærmstørrelsen er lige med eller mindre end 850px*/
+@media only screen and (max-width: 850px) {
+  .kontaktos p {
+    font-size: 1.3rem;
+  }
+  .adresselinkcontainericon i {
+    font-size: 2rem;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Koden dette virker kun når skærmstørrelsen er lige med eller mindre end 450px*/
+@media only screen and (max-width: 450px) {
+  .kontaktos {
+    padding: 2rem 1rem;
+  }
+  .danskespil {
+    padding: 2px 0;
+    gap: 10px;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*BASIS KODE TIL FOOTER OG DERES LINKS*/
+.footer {
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.footer p {
+  font-size: 1rem;
+  text-align: center;
+  color: #18183b;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 2rem;
+}
+
+.footer i {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #18183b;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 5px;
+  line-height: 2rem;
+}
+
+.footer br {
+  display: none;
+}
+
+.footerlinkcontainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 0.5rem;
+}
+
+.footerlinkcontainericon {
+  gap: 20px;
+}
+
+.footerlinkcontainer p:hover {
+  color: #f4c034;
+  transition: color 0.2s;
+  border-bottom: 1px solid #f4c034;
+}
+
+.footerlinkdisclaimer {
+  display: flex;
+  justify-content: center;
+}
+
+.footerlinkcontainer p {
+  border-bottom: 1px solid #18183b;
+  line-height: 1.5rem;
+}
+
+.credits {
+  padding-bottom: 5px;
+}
+
+/*------------------------------------------------------------------------------------*/
+/*RESPONSIV DEL AF KODEN - NÅR STØRRELSEN ER MINDRE END 730PX SÅ ER LINKERNE LODRETTE*/
+@media only screen and (max-width: 730px) {
+  .footer {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+  .footerlinkcontainer {
+    flex-direction: column;
+    padding: 0px 30px;
+    gap: 5px;
+    padding-bottom: 20px;
+    width: 140px;
+  }
+  .footerlinkcontainer p {
+    margin-top: 0;
+  }
+  .footer p {
+    padding-top: 10px;
+  }
+  .footer br {
+    display: block;
+  }
+  .footer i {
+    padding-top: 10px;
+    font-size: 2rem;
+  }
+  .credits {
+    order: 3;
+  }
+  .credits p {
+    padding-top: 0;
+  }
+}
+/*------------------------------------------------------------------------------------*/
+/*Kode til spillemaskinernes enkelte sider - de "om maskinen" og tekniske beskrivelser kode kan findes på _tekniske.scss*/
+/*Kode til spillemaskinernes struktur*/
+.spillemaskinecontent {
+  background-color: #18183b;
+  width: 100%;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til spillemaskinernes container*/
+.spillemaskinecontainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px 35px;
+  border-bottom: 1px solid #f4c034;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til spillemaskinernes titel*/
+.spillemaskinetitel {
+  font-size: 3rem;
+  text-align: center;
+  color: #f4c034;
+  margin: 0;
+  padding-top: 50px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til de venstre og højre spillemaskine billeder*/
+.spillemaskinevenstre, .spillemaskinehojre {
+  width: 300px;
+}
+
+.spillemaskinevenstre img, .spillemaskinehojre img {
+  width: 300px;
+  height: 800px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til spillemaskinen dette spiller videoer på*/
+.spillemaskinevideo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.spillemaskinevideo img {
+  width: 500px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til den spillemaskiners billede dette spilles videoer på*/
+.claritybackground, .uprightbackground, .superboxbackground {
+  position: relative;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til videoer dette spiller på Clarity spillemaskinen ned i bunden af Claritys side*/
+#clarityoverlaybottom {
+  position: absolute;
+  margin: 0;
+  transform: translate(-50%, 20%);
+  width: 67%;
+  height: 24%;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#clarityoverlaytop {
+  position: absolute;
+  margin: 0;
+  transform: translate(-50%, -88%);
+  width: 64%;
+  height: 28%;
+  top: 50%;
+  left: 50%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+#clarityoverlayupper {
+  position: absolute;
+  margin: 0;
+  transform: translate(-50%, -219%);
+  width: 64%;
+  height: 21.2%;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til videoer dette spiller på Superbox spillemaskinen ned i bunden af Superboxs side*/
+#superboxoverlaybottom {
+  position: absolute;
+  margin: 0;
+  transform: translate(-50%, 10%);
+  width: 71.5%;
+  height: 26%;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#superboxoverlaytop {
+  position: absolute;
+  margin: 0;
+  transform: translate(-50%, -105%);
+  width: 68%;
+  height: 27%;
+  top: 50%;
+  left: 50%;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til videoer dette spiller på Upright spillemaskinen ned i bunden af Uprights side*/
+#uprightoverlaybottom {
+  position: absolute;
+  margin: 0;
+  transform: translate(-50%, -12%);
+  width: 68.2%;
+  height: 29.3%;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#uprightoverlaytop {
+  position: absolute;
+  margin: 0;
+  transform: translate(-50%, -120%);
+  width: 68.2%;
+  height: 28%;
+  top: 50%;
+  left: 50%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 1800px*/
+@media only screen and (max-width: 1600px) {
+  .spillemaskinecontainer {
+    display: block;
+    padding: 50px;
+  }
+  .spillemaskinecontainer iframe {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    width: 100%;
+    height: 500px;
+    overflow: auto;
+  }
+  .spillemaskinevenstre, .spillemaskinehojre {
+    display: none;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til "om maskinen" og tekniske specifikationer deler af hver enkelte spillemaskinernes sider - resten af sidernes struktur kan findes på _spillemaskine.scss*/
+/*Kode til "om maskinen" og tekniske specifikationer struktur*/
+.tekniskenavigation {
+  margin: 0;
+  top: 0;
+  background-color: #18183b;
+  font-size: 1.2rem;
+  width: 100%;
+  border-bottom: 2px solid #f4c034;
+}
+
+.tekniskenavigation p {
+  color: #f4c034;
+  font-size: 1.025rem;
+}
+
+.tekniskenavigation h2 {
+  color: #f4c034;
+  font-size: 2rem;
+}
+
+.tekniskenavigation i {
+  color: #f4c034;
+  font-size: 1.025rem;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til "om maskinen" og tekniske specifikationer container*/
+.tekniskecontainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 200px;
+}
+
+.tekniskecontainer img {
+  width: 250px;
+}
+
+.tekniskecontainer li {
+  padding-bottom: 2px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til hver enkelte element af "om maskinen" og tekniske specifikationer del af siden*/
+.tekniske1, .tekniske2, .tekniske3 {
+  padding-bottom: 20px;
+  color: white;
+  width: 30%;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til "om maskinen" og tekniske specifikationer elementer - tekniske1 svarer til "om maskinen" og tekniske3 svarer til specifikationerne*/
+.tekniske1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tekniske1 h2 {
+  margin-bottom: 0;
+}
+
+.tekniske1 ul {
+  padding-left: 15px;
+}
+
+.tekniske1, .tekniske3 {
+  padding-top: 30px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til spillemaskinens billede og titel*/
+.tekniske2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.tekniske2 h1 {
+  letter-spacing: 0.5rem;
+  color: #f4c034;
+  text-align: center;
+  margin-bottom: 0;
+  width: 250px;
+}
+
+.tekniske2 img {
+  justify-content: center;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 1800px*/
+@media only screen and (max-width: 1800px) {
+  .tekniskecontainer {
+    padding: 50px 80px;
+  }
+  .tekniskecontainer img {
+    width: 200px;
+  }
+  .tekniske1, .tekniske3 {
+    font-size: 1rem;
+  }
+  .tekniske2 h1 {
+    font-size: 1.5rem;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 1150px*/
+@media only screen and (max-width: 1150px) {
+  .tekniskecontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tekniske1, .tekniske2, .tekniske3 {
+    width: 100%;
+    border-bottom: 1px solid #f4c034;
+  }
+  .tekniske1, .tekniske3 {
+    padding: 50px 2rem;
+  }
+  .tekniskecontainer img {
+    width: 40%;
+  }
+  .tekniske2 {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+  .tekniske2 h1 {
+    text-align: center;
+    font-size: 3rem;
+    width: 100%;
+  }
+  .tekniske1 {
+    order: 2;
+    font-size: 2rem;
+    padding-bottom: 0px;
+  }
+  .tekniske1 h2 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .tekniske3 {
+    order: 3;
+    font-size: 2rem;
+    padding-bottom: 0px;
+  }
+  .tekniske3 h2 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 850px*/
+@media only screen and (max-width: 850px) {
+  .tekniske2 h1 {
+    font-size: 3rem;
+  }
+  .tekniskecontainer img {
+    width: 50%;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 600px*/
+@media only screen and (max-width: 600px) {
+  .tekniskecontainer {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .tekniske1 li, .tekniske3 li {
+    font-size: 1.5rem;
+  }
+  .tekniske2 h1 {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  .tekniskecontainer img {
+    width: 70%;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 450px*/
+@media only screen and (max-width: 450px) {
+  .tekniske1 li, .tekniske2 li, .tekniske3 li {
+    font-size: 1rem;
+    text-align: center;
+  }
+  ul {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+  .tekniske1 h3, .tekniske3 h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .tekniske1 h2, .tekniske3 h2 {
+    font-size: 1.5rem;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til mest af sidernes struktur - Kontakt, Ansvarlighed, Ansvarligheds Link, Om Os, Whistleblower og Ledige Stillinger*/
+.kontaktnavigation {
+  margin: 0;
+  top: 0;
+  background-color: #181836;
+  font-size: 2rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.kontaktnavigation p {
+  color: #f4c034;
+  font-size: 1.025rem;
+}
+
+.kontaktnavigation h1 {
+  text-align: center;
+  color: #f4c034;
+  padding: 30px 0;
+}
+
+.kontaktnavigation h2 {
+  color: #f4c034;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 0;
+}
+
+.kontaktnavigation h2:hover {
+  color: #A82222;
+  transition: color 0.2s;
+}
+
+.kontaktnavigation h1:hover {
+  color: #A82222;
+  transition: color 0.2s;
+}
+
+.kontaktnavigation i {
+  color: #c3d4cf;
+  font-size: 1.025rem;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til kontakt sides container*/
+.kontaktcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.kontaktcontainer img {
+  max-width: 800px;
+  max-height: 1218px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til hver enkelt kontakt element*/
+.kontakt1, .kontakt2, .kontakt3, .kontakt4 {
+  padding-bottom: 50px;
+  width: 36rem;
+  text-align: center;
+  flex: 50%;
+}
+
+.kontakt1 img, .kontakt2 img, .kontakt3 img, .kontakt4 img {
+  filter: grayscale(50%);
+}
+
+.kontakt1 img:hover, .kontakt2 img:hover, .kontakt3 img:hover, .kontakt4 img:hover {
+  filter: grayscale(0%);
+  transition: filter 0.2s;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til mest af den lysegrønnet tekst på kontaktsiden*/
+.email {
+  color: #c3d4cf;
+}
+
+.email:hover {
+  color: #A82222;
+  transition: color 0.2s;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til kontaktsiden når skærmstørrelsen er lige med eller mindre end 1810px*/
+@media only screen and (max-width: 1810px) {
+  .kontaktcontainer img {
+    max-width: 600px;
+  }
+  .kontakt1, .kontakt2, .kontakt3, .kontakt4 {
+    max-width: 600px;
+  }
+  .kontakt1 h2, .kontakt2 h2, .kontakt3 h2, .kontakt4 h2 {
+    font-size: 1.5rem;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til kontaktsiden når skærmstørrelsen er lige med eller mindre end 1366px*/
+@media only screen and (max-width: 1366px) {
+  .kontaktcontainer img {
+    max-width: 500px;
+  }
+  .kontakt1, .kontakt2, .kontakt3, .kontakt4 {
+    max-width: 500px;
+  }
+  .kontakt1 h2, .kontakt2 h2, .kontakt3 h2, .kontakt4 h2 {
+    font-size: 1rem;
+  }
+  .kontaktnavigation h1 {
+    font-size: 3rem;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til kontaktsiden når skærmstørrelsen er lige med eller mindre end 800px*/
+@media only screen and (max-width: 1279px) {
+  .kontaktcontainer {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .kontaktcontainer img {
+    max-width: 100%;
+    padding-bottom: 10px;
+  }
+  .kontakt1 {
+    max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .kontakt2, .kontakt3, .kontakt4 {
+    max-width: 100%;
+    border-top: 1px solid #f4c034;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .kontakt1 h2, .kontakt2 h2, .kontakt3 h2, .kontakt4 h2 {
+    font-size: 2rem;
+    padding-top: 10px;
+  }
+  .kontakt1 p, .kontakt2 p, .kontakt3 p, .kontakt4 p {
+    font-size: 1.025rem;
+  }
+  .kontaktnavigation h1 {
+    font-size: 2rem;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*KODE TIL ANSVARLIGHEDS SIDE / STRUKTUR KODE FINDES IND I KONTAKT.SCSS*/
+/* Kode til Stopspillet container og logo */
+.stopspillet {
+  display: flex;
+  justify-content: center;
+}
+
+.stopspillet img {
+  width: 900px;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/* Kode til alle links til StopSpillet, Danske Spil test og tlf. nr. til Spillemyndigheden */
+.spilletlink {
+  border-bottom: 2px solid white;
+  color: white;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*Kode til Information om spil på spilautomater link*/
+.informationtitel {
+  text-align: center;
+  color: white;
+}
+
+.informationtitel h1 {
+  margin-top: 0;
+}
+
+.informationtitel h1:hover {
+  color: #991d1b;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/*Kode dette ændrer nogle af koderne opad kun på skærmstørrelser lige med og under 950px*/
+@media only screen and (max-width: 950px) {
+  .stopspillet img {
+    width: 600px;
+  }
+  .informationtitel {
+    font-size: 1.5rem;
+  }
+}
+/*Kode dette ændrer nogle af koderne opad kun på skærmstørrelser lige med og under 650px*/
+@media only screen and (max-width: 650px) {
+  .stopspillet img {
+    width: 450px;
+  }
+  .informationtitel {
+    font-size: 1.1rem;
+  }
+}
+/*Kode dette ændrer nogle af koden opad kun på skærmstørrelse lige med og under 470px*/
+@media only screen and (max-width: 470px) {
+  .stopspillet img {
+    width: 300px;
+  }
+  .informationtitel {
+    font-size: 0.8rem;
+  }
+}
+/*-----------------------------------------------------------------------------------------*/
+/*Kode til hovedsidens baggrund farve, font størrelse og farve*/
+.indexnavigation {
+  margin: 0;
+  top: 0;
+  background-color: #181836;
+  font-size: 2rem;
+  position: relative;
+}
+
+.indexnavigation p {
+  color: #f4c034;
+  font-size: 2rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.indexnavigation h2 {
+  color: #f4c034;
+  font-size: 5rem;
+  text-align: center;
+  margin: 0;
+  pointer-events: none;
+  text-shadow: 2px 2px 2px black;
+}
+
+.indexnavigation i {
+  color: #181836;
+  font-size: 1.025rem;
+}
+
+/*Kode til index container*/
+.indexcontainer {
+  text-align: center;
+  padding: 100px 50px 100px 50px;
+  z-index: 1;
+  position: relative;
+}
+
+.indexcontainer img {
+  width: 100%;
+  height: 550px;
+}
+
+.indexcontainer ul {
+  display: table;
+  list-style-position: inside;
+  margin: 0 auto;
+  padding: 20px 50px;
+  padding-bottom: 30px;
+  max-width: 1000px;
+}
+
+.indexcontainer li {
+  color: white;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+/*Kode til hver enkelt element ind i containeren*/
+.index1, .index2, .index3 {
+  position: relative;
+  filter: grayscale(30%);
+}
+
+.index1 img, .index2 img {
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.index3 img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.index1:hover, .index2:hover, .index3:hover {
+  filter: grayscale(0%);
+  transition: filter 0.2s;
+}
+
+#indexoverlay1, #indexoverlay2, #indexoverlay3 {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/*Kode til at vise cirkel billedet på hovedsiden*/
+.circle-left {
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  transform: translate(0%, -50%);
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 0%;
+}
+
+.circle-right {
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  transform: translate(-100%, -50%);
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 100%;
+}
+
+/*Kode til at ikke vise mobil billeder når man er på computeren*/
+.mobilcontent {
+  display: none;
+}
+
+/*Kode til at skifte computer billeder med deres mobil versioner når skærmstørrelsen er mindre end 1279px*/
+@media only screen and (max-width: 1279px) {
+  .mobilcontent {
+    display: block;
+  }
+  .computercontent {
+    display: none;
+  }
+}
+/*Kode til headeren når skærmstørrelsen er mindre end 1180px*/
+@media only screen and (max-width: 1180px) {
+  .indexcontainer h2 {
+    font-size: 4rem;
+  }
+  .indexcontainer {
+    padding-top: 110px;
+  }
+}
+/*Kode til headeren når skærmstørrelsen er mindre end 900px*/
+@media only screen and (max-width: 900px) {
+  .indexcontainer h2 {
+    font-size: 3.5rem;
+  }
+  .indexcontainer {
+    padding-top: 120px;
+  }
+}
+/*Kode til headeren når skærmstørrelsen er mindre end 800px*/
+@media only screen and (max-width: 900px) {
+  .indexcontainer h2 {
+    font-size: 2rem;
+  }
+  .indexcontainer {
+    padding-top: 150px;
+  }
+}
+/*Kode til at ændre sidens struktur og layout når skærmstørrelsen er mindre end 650px*/
+@media only screen and (max-width: 650px) {
+  #indexoverlay1 h2, #indexoverlay2 h2, #indexoverlay3 h2 {
+    font-size: 3rem;
+  }
+  .indexnavigation p, .indexnavigation li {
+    font-size: 1.5rem;
+  }
+  .indexnavigation li {
+    padding-bottom: 10px;
+  }
+  .index2 img {
+    object-position: 30% 25%;
+  }
+}
+/*KODEN TIL ANSVARLIGT SPIL, MYTER OG FAKTA, BEHANDLING, GODE VANER OG SPILLEVANER SIDER*/
+.ansvarlighedlinkscontainer {
+  padding-bottom: 2rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.ansvarlighedlinkscontainer p {
+  margin-bottom: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.ansvarlighedlinkscontainer h3 {
+  color: white;
+}
+
+.ansvarlighedlinkscontainer li {
+  color: #18183b;
+  list-style-type: "> ";
+  line-height: 2rem;
+}
+
+/*Koden til de samme som opad, men kun til skærmstørrelsen det er lige med eller mindre end 950px*/
+@media only screen and (max-width: 950px) {
+  .ansvarlighedlinkscontainer {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .ansvarlighedlinkscontainer h3 {
+    font-size: 2rem;
+  }
+}
+/*Koden til de samme som opad, men kun til skærmstørrelsen det er lige med eller mindre end 650px*/
+@media only screen and (max-width: 650px) {
+  .ansvarlighedlinkscontainer {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .ansvarlighedlinkscontainer h3 {
+    font-size: 1.5rem;
+  }
+  .ansvarlighedlinkscontainer p, .ansvarlighedlinkscontainer li {
+    font-size: 1.3rem;
+  }
+}
+/*Koden til de samme som opad, men kun til skærmstørrelsen det er lige med eller mindre end 450px*/
+@media only screen and (max-width: 450px) {
+  .ansvarlighedlinkscontainer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .ansvarlighedlinkscontainer h3 {
+    font-size: 1rem;
+  }
+}
+/*Kode til gevinster container*/
+.gevinstercontainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  font-size: 2rem;
+  padding: 2rem 2rem;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til hver element på gevinstersiden*/
+.gevinstercontent {
+  width: 100%;
+  max-width: 80rem;
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gevinstercontent p {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.gevinstercontent h3 {
+  color: #f4c034;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til at lave pris baggrund og farve konstant ændre sig*/
+@-webkit-keyframes Dannebrog {
+  0% {
+    background-color: white;
+    color: #E31836;
+  }
+  50% {
+    background-color: #E31836;
+    color: white;
+  }
+  100% {
+    background-color: white;
+    color: #E31836;
+  }
+}
+.gevinstercontentright h3 {
+  text-align: center;
+  border-radius: 5px;
+  width: 15rem;
+  -webkit-animation-name: Dannebrog;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 2s;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til gevinsters regnede dollars baggrund*/
+#gevinsterbaggrund {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til "find din forhandler" knap*/
+.finddinforhandler {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.finddinforhandler p {
+  background-color: #E31836;
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.finddinforhandler p:hover {
+  background-color: #A82222;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til gevinster siden dette virker kun når skærmstørrelsen er lige med eller mindre end 850px*/
+@media only screen and (max-width: 850px) {
+  .gevinstercontent h3 {
+    font-size: 1.5rem;
+  }
+  .gevinstercontent p {
+    font-size: 1rem;
+  }
+  .gevinstercontentright h3 {
+    width: 11rem;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til gevinster siden dette virker kun når skærmstørrelsen er lige med eller mindre end 550px*/
+@media only screen and (max-width: 550px) {
+  .gevinstercontent {
+    flex-direction: column;
+    align-items: center;
+    height: 19rem;
+  }
+  .gevinstercontent h3 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .gevinstercontent p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .finddinforhandler p {
+    font-size: 1.5rem;
+    width: 230px;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til ledige stillinger sides container*/
+.ledighedscontainer {
+  padding-bottom: 2rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.ledighedscontainer p, .ledighedscontainer li, .ledighedscontainer i {
+  font-size: 2rem;
+  color: #c3d4cf;
+}
+
+.ledighedscontainer h3 {
+  color: white;
+  padding-top: 40px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til linjen på bunden af stilling tekst før italics teksten*/
+.ledighedtext {
+  border-bottom: 2px solid white;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til italics teksten*/
+.ledigheditalics {
+  padding-top: 30px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode dette svarer til skærmstørrelse dette er lige med eller mindre end 1000px*/
+@media only screen and (max-width: 1000px) {
+  .ledighedscontainer {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til struktur af "Spil med omtanke" del på alle sider*/
+.spilmedomtanke {
+  color: #f4c034;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #181836;
+  border-top: 2px solid #f4c034;
+  padding: 30px 30px;
+}
+
+.spilmedomtanke h2 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.spilmedomtanke h3 {
+  margin-bottom: 0;
+  font-size: 2rem;
+}
+
+.spilmedomtanke p {
+  font-size: 2rem;
+}
+
+.spilmedomtanke a {
+  color: #f4c034;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til "Spil med omtanke" containeren*/
+.spilmedomtankecontentcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til "Spil med omtanke" kasser*/
+.spilmedomtankecontentbox {
+  border-radius: 0.8rem;
+  width: 218px;
+  height: 180px;
+  background-color: #3a3a7e;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+.spilmedomtankecontentbox:hover {
+  background-color: #6b0f0f;
+  transition: background-color 0.2s;
+}
+
+.spilmedomtankecontentbox img {
+  max-width: 139px;
+  height: 70px;
+}
+
+.spilmedomtankecontentbox p {
+  font-size: 1rem;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til "Spil med omtanke"s "Læs mere her" knap*/
+.laesmereher {
+  justify-content: center;
+  display: flex;
+  padding: 0 20px;
+}
+
+.laesmereher p {
+  border-bottom: 2px solid #f4c034;
+  text-align: center;
+}
+
+.laesmereher p:hover {
+  color: #A82222;
+  border-bottom: 2px solid #A82222;
+  transition: all 0.2s;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 1160px*/
+@media only screen and (max-width: 1160px) {
+  .spilmedomtankecontentbox {
+    width: 350px;
+  }
+  .spilmedomtankecontentcontainer {
+    gap: 40px;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+/*Kode dette svarer til skærmstørrelsen lige med eller mindre end 450px*/
+@media only screen and (max-width: 450px) {
+  .spilmedomtankecontentbox {
+    width: 250px;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+.blivkundecontainer {
+  font-size: 2rem;
+  background-color: #18183b;
+  margin: 0;
+  padding: 20px 40px;
+}
+
+.blivkundecontainer h3, h2 {
+  color: #f4c034;
+}
+
+.blivkundecontainer p, li, ul {
+  color: white;
+  margin: 0;
+  padding-bottom: 5px;
+  list-style: none;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], input[type=tel], input[type=email], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #f4c034;
+  color: #18183b;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #A82222;
+}
+
+/* Add a background color and some padding around the form */
+.blivkundeformular {
+  border-top: 2px solid #f4c034;
+  background-color: #18183b;
+  padding: 20px 50px;
+}
+
+.blivkundeformular label {
+  color: #f4c034;
+}
+
+.blivkundeformular h2 {
+  text-align: center;
+}
+
+/*Kode til galleri containeren*/
+.gallericontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  padding: 20px 40px;
+}
+
+.gallericontainer img {
+  max-width: 800px;
+  max-height: 40rem;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til hver enkelt galleri element*/
+.galleri1, .galleri2, .galleri3, .galleri4, .galleri5, .galleri6, .galleri7, .galleri8, .galleri9, .galler10 {
+  padding-bottom: 50px;
+  width: 36rem;
+  text-align: center;
+  flex: 33.3%;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til spil containeren*/
+.spilcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.spilcontainer img {
+  max-width: 800px;
+  max-height: 25rem;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*Kode til hver enkelt spil element*/
+.spilelement {
+  padding-bottom: 50px;
+  width: 36rem;
+  text-align: center;
+  flex: 25%;
+}
+
+@media only screen and (max-width: 1708px) {
+  .spilelement h2 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .spilelement img {
+    width: 15rem;
+  }
+}
+@media only screen and (max-width: 326px) {
+  .spilelement h2 {
+    font-size: 1rem;
+  }
+  .spilelement img {
+    width: 8rem;
+  }
+}
+/*------------------------------------------------------------------------------------------------*/
+.flag-icon {
+  position: relative;
+  left: 10px;
+}
+
+/*# sourceMappingURL=main.css.map */
