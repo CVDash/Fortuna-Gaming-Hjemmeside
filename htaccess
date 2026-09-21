@@ -59,4 +59,4 @@ ExpiresByType application/javascript "access plus 1 year"
 </IfModule>
 
 RewriteCond %{HTTP_HOST} !^www.elitegaming.dk$ [NC]
-RewriteRule ^(.*)$ https://www.elitegaming.dk/$1 [L,R=301]
+RewriteRule ^(.*)$ https://www.fortuna.dk/$1 [L,R=301]
